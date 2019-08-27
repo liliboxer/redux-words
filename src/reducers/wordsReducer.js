@@ -1,5 +1,9 @@
 import words from '../fixtures/words.json';
 
-export default function wordsReducer(state = [...words], action) {
+const initialState = {
+  dictionary: [...words]
+};
+
+export default function wordsReducer(state = initialState, action) {
   return state;
 }
