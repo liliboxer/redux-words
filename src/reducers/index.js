@@ -2,5 +2,5 @@ import { combineReducers } from 'redux';
 import words from './wordsReducer';
 
 export default combineReducers({
-  dictionary: words
+  words
 });
