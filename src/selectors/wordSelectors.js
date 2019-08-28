@@ -8,7 +8,7 @@ export const getSearchTerm = state => state.words.searchTerm;
 
 export const getTopWordsByTerm = (state, count) => {
   const searchTerm = getSearchTerm(state);
-  return getFirstWords(state, count).filter(word => {
+  return getWords(state).filter(word => {
     return word.includes(searchTerm);
-  });
+  }).slice(0, count);
 };
