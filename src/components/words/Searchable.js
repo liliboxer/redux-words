@@ -3,17 +3,18 @@ import SearchWords from '../containers/words/SearchWords';
 import TopWords from '../containers/words/TopWords';
 import PropTypes from 'prop-types';
 
-function Searchable({ match }) {
+function Searchable({ match, history }) {
   return (
     <>
-      <SearchWords />
+      <SearchWords history={history}/>
       <TopWords count={match.params.count}/>
     </>
   );
 }
 
 Searchable.propTypes = {
-  match: PropTypes.object.isRequired
+  match: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
 };
 
 export default Searchable;

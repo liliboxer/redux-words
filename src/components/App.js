@@ -7,7 +7,7 @@ export default function App() {
   return (
     <Router>
       <Route path="/words/:count" component={Searchable}/>
-      <Route exact path="/" component={TopWords} />
+      <Route exact path="/" component={Searchable} />
     </Router>
   );
 }
